@@ -13,11 +13,11 @@
 
    ```groovy
    def process = "cat /etc/passwd".execute()
-   def output = new StringBuffer()
-   process.consumeProcessOutput(output, System.err)
-   process.waitFor()
+def output = new StringBuffer()
+process.consumeProcessOutput(output, System.err)
+process.waitFor()
 
-   println ${output}```
+println "${output}: "```
 Result : 
 ```
 root:x:0:0:root:/root:/bin/bash
