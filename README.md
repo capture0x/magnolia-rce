@@ -1,10 +1,10 @@
-# Exploit Title: Magnolia DX Core 6.3.8 - Command Injection  
-# Date: 05/16/2025  
-# Exploit Author: tmrswrr  
-# Version: 6.3.8  
-# Vendor home page: https://docs.magnolia-cms.com/home/  
-# Product: https://docs.magnolia-cms.com/product-docs/6.3/releases/release-notes-for-magnolia-cms-6.3.8/  
-# Demo: https://docs.magnolia-cms.com/product-docs/6.3/getting-started-with-magnolia/demo/  
+#### Exploit Title: Magnolia DX Core 6.3.8 - Command Injection  
+#### Date: 05/16/2025  
+#### Exploit Author: tmrswrr  
+#### Version: 6.3.8  
+#### Vendor home page: https://docs.magnolia-cms.com/home/  
+#### Product: https://docs.magnolia-cms.com/product-docs/6.3/releases/release-notes-for-magnolia-cms-6.3.8/  
+#### Demo: https://docs.magnolia-cms.com/product-docs/6.3/getting-started-with-magnolia/demo/  
 
 1) Authenticate as an admin:  
    `https://demoauthor.magnolia-cms.com/.magnolia/admincentral`  
